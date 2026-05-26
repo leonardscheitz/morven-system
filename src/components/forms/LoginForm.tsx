@@ -1,0 +1,5 @@
+"use client";
+import Link from "next/link"; import { useForm } from "react-hook-form"; import { zodResolver } from "@hookform/resolvers/zod"; import { z } from "zod"; import { loginSchema } from "@/lib/validations"; import { Input } from "@/components/ui/Input"; import { Button } from "@/components/ui/Button";
+type T = z.infer<typeof loginSchema>;
+export function LoginForm(){const {register,handleSubmit,formState:{isSubmitting,isSubmitSuccessful}}=useForm<T>({resolver:zodResolver(loginSchema)}); const onSubmit=async()=>{await new Promise(r=>setTimeout(r,600));};
+return <form onSubmit={handleSubmit(onSubmit)} className="panel p-6 rounded-xl space-y-3"><Input placeholder="E-mail" {...register("email")}/><Input placeholder="Senha" type="password" {...register("password")}/><Button disabled={isSubmitting}>{isSubmitting?"Entrando...":"Entrar"}</Button>{isSubmitSuccessful&&<p className="text-cyan text-xs">Autenticação mock concluída. Integrar provider real no submit.</p>}<div className="text-xs text-muted flex justify-between"><Link href="/cadastro">Criar cadastro</Link><a href="#">Esqueci minha senha</a></div></form>}

@@ -1,0 +1,1 @@
+export default function Page(){return <main className="section pt-28 pb-20 prose prose-invert max-w-3xl"><h1>Política de Privacidade</h1><p>Este texto inicial deve ser revisado juridicamente antes da publicação oficial para aderência total à LGPD e às operações reais da Morven Systems.</p></main>}
