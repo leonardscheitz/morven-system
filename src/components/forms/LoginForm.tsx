@@ -1,0 +1,4 @@
+'use client';
+import Link from 'next/link'; import { useForm } from 'react-hook-form'; import { zodResolver } from '@hookform/resolvers/zod'; import { loginSchema } from '@/lib/validations'; import { z } from 'zod'; import { waitMock } from '@/lib/utils'; import { Input } from '../ui/Input'; import { Button } from '../ui/Button';
+type Data=z.infer<typeof loginSchema>;
+export function LoginForm(){const {register,handleSubmit,formState:{isSubmitting}}=useForm<Data>({resolver:zodResolver(loginSchema)});const onSubmit=async()=>{await waitMock();};return <form onSubmit={handleSubmit(onSubmit)} className='space-y-3'><Input placeholder='E-mail' {...register('email')} /><Input type='password' placeholder='Senha' {...register('password')} /><Button type='submit' disabled={isSubmitting}>{isSubmitting?'Entrando...':'Entrar'}</Button><p className='text-sm text-muted'><Link href='/cadastro'>Criar cadastro</Link> · <a href='#'>Esqueci minha senha</a></p></form>}

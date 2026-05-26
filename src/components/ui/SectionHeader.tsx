@@ -1,0 +1,1 @@
+export function SectionHeader({tag,title,desc}:{tag:string,title:string,desc:string}){return <div className='max-w-3xl space-y-3'><p className='text-xs uppercase tracking-[0.2em] text-cyan'>{tag}</p><h2 className='text-3xl md:text-4xl font-semibold text-text'>{title}</h2><p className='text-muted'>{desc}</p></div>}
