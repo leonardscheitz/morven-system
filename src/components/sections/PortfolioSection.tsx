@@ -1,0 +1,1 @@
+export const PortfolioSection=()=> <section className='py-16'><div className='mx-auto max-w-7xl px-4'><h2 className='text-3xl text-text'>Portfólio em construção</h2><p className='text-muted mt-2'>Projetos reais serão adicionados conforme forem publicados.</p></div></section>;

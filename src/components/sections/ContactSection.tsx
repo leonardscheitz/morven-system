@@ -1,0 +1,1 @@
+import { ContactForm } from '../forms/ContactForm'; export const ContactSection=()=> <section className='py-16'><div className='mx-auto max-w-4xl px-4'><h2 className='text-3xl text-text mb-6'>Contato</h2><ContactForm/></div></section>;

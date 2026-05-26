@@ -1,0 +1,3 @@
+'use client';
+import { Menu, X } from 'lucide-react';import { useState } from 'react';import { motion, AnimatePresence } from 'framer-motion';
+export function MobileMenu(){const [o,setO]=useState(false);return <div className='md:hidden'>{<button onClick={()=>setO(!o)} className='text-text'>{o?<X/>:<Menu/>}</button>}<AnimatePresence>{o&&<motion.div initial={{opacity:0,y:-8}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-8}} className='absolute left-4 right-4 top-16 rounded-2xl border border-line bg-panel p-4'>{['/','/servicos','/contato','/agendar','/area-cliente'].map((h)=><a key={h} href={h} className='block py-2 text-text'>{h}</a>)}</motion.div>}</AnimatePresence></div>}

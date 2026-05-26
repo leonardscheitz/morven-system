@@ -1,0 +1,1 @@
+export default function Page(){return <div className='pt-28 mx-auto max-w-4xl px-4'><h1 className='text-3xl'>Política de Privacidade</h1><p className='text-muted mt-4'>Documento inicial para publicação técnica. Revisão jurídica obrigatória antes de uso oficial.</p></div>}

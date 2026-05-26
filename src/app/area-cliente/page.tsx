@@ -1,0 +1,1 @@
+export default function Page(){return <div className='pt-28 mx-auto max-w-6xl px-4'><h1 className='text-3xl'>Área do cliente (mock)</h1><p className='text-muted mt-2'>Estrutura inicial para status de projeto, propostas, reuniões, mensagens e arquivos, aguardando autenticação real e backend.</p></div>}

@@ -1,0 +1,1 @@
+export default function Page(){return <div className='pt-28 mx-auto max-w-4xl px-4'><h1 className='text-3xl'>Termos de Uso</h1><p className='text-muted mt-4'>Versão inicial técnica. Revisar juridicamente antes da publicação oficial.</p></div>}

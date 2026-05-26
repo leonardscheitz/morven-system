@@ -1,0 +1,1 @@
+export const ClientAreaPreview=()=> <section className='py-16'><div className='mx-auto max-w-7xl px-4'><h2 className='text-3xl text-text'>Área do cliente</h2><div className='mt-4 grid gap-3 md:grid-cols-3'>{['Status do projeto','Mensagens','Arquivos'].map(i=><div key={i} className='rounded-xl border border-line p-4 text-muted'>{i}</div>)}</div></div></section>;
