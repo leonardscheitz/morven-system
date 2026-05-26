@@ -1,0 +1,1 @@
+export default function Page(){return <main className="section pt-28 pb-20"><h1 className="text-4xl font-semibold">Serviços Morven Systems</h1><p className="mt-4 text-muted">Sites, landing pages, sistemas web, dashboards e automações com padrão profissional.</p></main>}

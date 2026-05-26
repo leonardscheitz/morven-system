@@ -1,0 +1,5 @@
+"use client";
+import { useForm } from "react-hook-form"; import { zodResolver } from "@hookform/resolvers/zod"; import { z } from "zod"; import { scheduleSchema } from "@/lib/validations"; import { Input } from "@/components/ui/Input"; import { Textarea } from "@/components/ui/Textarea"; import { Button } from "@/components/ui/Button";
+type T = z.infer<typeof scheduleSchema>;
+export function ScheduleForm(){const {register,handleSubmit,formState:{isSubmitting,isSubmitSuccessful}}=useForm<T>({resolver:zodResolver(scheduleSchema)}); const onSubmit=async()=>{await new Promise(r=>setTimeout(r,700));};
+return <form onSubmit={handleSubmit(onSubmit)} className="panel p-6 rounded-xl space-y-3">{["name","email","whatsapp","company","projectType","bestDay","bestTime"].map((f)=><Input key={f} placeholder={f} {...register(f as keyof T)} />)}<Textarea placeholder="Observações" {...register("notes")}/><Button disabled={isSubmitting}>{isSubmitting?"Enviando...":"Agendar"}</Button>{isSubmitSuccessful&&<p className="text-cyan text-xs">Solicitação mock registrada para integração com Calendly/Cal.com.</p>}</form>}
